@@ -1,0 +1,36 @@
+server:
+  port: 5555
+eureka:
+  instance:
+    hostname: localhost
+  client:
+   serviceUrl:
+    defaultZone: http://127.0.0.1:1111/eureka/
+    healthcheck:
+      enabled: true
+    
+spring:    
+  application:
+    name: zuul-server
+    
+
+zuul:
+  #Service will be mapped under the /api URI
+  prefix: /api
+#  Uncomment to disable auto-registering all services read from Eureka
+#  ignoredServices: '*'
+  routes:
+    school-service:
+      path: /school-service/**
+      serviceId: SCHOOL-SERVICE
+    student-service:
+      path: /student-service/**
+      serviceId: STUDENT-SERVICE
+      
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000

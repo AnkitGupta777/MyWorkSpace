@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: SchoolServiceApp
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: ag89333
+Implementation-Vendor-Id: com.school
+Build-Jdk: 1.8.0_112
+Implementation-URL: http://projects.spring.io/spring-boot/schoolservic
+ e/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
